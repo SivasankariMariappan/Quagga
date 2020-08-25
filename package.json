@@ -4,11 +4,7 @@
   "description": "An example of how to use quagga2 in combination with react and webpack",
   "main": "index.js",
   "scripts": {
-    "start": "npx webpack-dev-server -d --hot --port=3000",
-    "build": "npm install && npx webpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "start": "react-scripts start"
   },
   "keywords": [
     "quaggajs",
@@ -24,20 +20,30 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@ericblade/quagga2": "^1.0.6",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "@ericblade/quagga2": "^1.2.2",
+    "react": "16.8",
+    "react-scripts": "3.1.2",
+    "react-dom": "16.8",
     "prop-types": "^15.7.2",
+    "react-device-detect": "^1.6.2",
     "snyk": "^1.334.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/preset-react": "^7.10.1",
-    "babel-loader": "^8.1.0",
-    "react-hot-loader": "^4.12.21",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-redux": "^0.2.1"
   },
-  "snyk": true
+  "snyk": true,
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
